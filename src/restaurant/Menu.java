@@ -31,6 +31,17 @@ public class Menu {
     }
 
     public void addMenuItem(MenuItem item){
-        this.menuItems.add(item);
+        if (menuItems.contains(item)) {
+            System.out.println("there can only be one");
+        } else {
+            this.menuItems.add(item);
+        }
+    }
+
+    public MenuItem removeMenuItem(int indexOfRemovalItem) {
+       return this.menuItems.remove(indexOfRemovalItem);
     }
 }
+
+
+//
